@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog design system</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page_wrapper">
+        <div class="container-buttons">
+            <button class="btn btn-dialog" data-modal="dialog" data-type="warning" data-title="¡Cuidado!" data-text="No podrás volver atrás">Warning</button>
+            <button class="btn btn-dialog" data-modal="dialog" data-type="success" data-title="¡Vamos!" data-text="Todo ha salido bien :)">Success</button>
+            <button class="btn btn-dialog" data-modal="dialog" data-type="error" data-title="Upss" data-text="Algo ha pasado">Error</button>
+        </div>
+
+        <div id="dialog-component" class="dialog_component">
+            <div id="dialog-close" class="dialog-close"></div>
+            <div class="dialog-type_badge"></div>
+            <h3 id="dialog-title" class="dialog-title"></h3>
+            <div id="dialog-text" class="dialog-text"></div>
+            <div class="dialog-buttons warning">
+                <div class="container-buttons">
+                    <button class="btn btn-ok" onclick="dialogClose()">Borrar</button>
+                    <button class="btn btn-secondary btn-ko" onclick="dialogClose()">Cancelar</button>
+                </div>
+            </div>
+            <div class="dialog-buttons success">
+                <div class="container-buttons">
+                    <button class="btn btn-ko" onclick="dialogClose()">Cerrar pestaña</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./App.js"></script>
+</body>
+
+</html>
